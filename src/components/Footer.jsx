@@ -1,10 +1,23 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const currentYear = new Date().getFullYear();
+
+const LinkedInIcon = <FontAwesomeIcon icon={["fab", "linkedin"]} size='3x' />
+const linkedInUrl = "https://www.linkedin.com/in/bda2013";
+
+const gitHubIcon = <FontAwesomeIcon icon={['fab', 'github']} size='3x' color='black'/>
+const gitHubUrl = "https://github.com/BDA2013";
 
 export default function Footer() {
     return (
         <footer className="footer">
             <div className="container">
-                <span className="text-muted">© {currentYear} Brandon Alexander</span>
+            <a href={linkedInUrl} target="_blank" rel="noreferrer">{LinkedInIcon}</a>
+            &nbsp;
+            <a href={gitHubUrl} target="_blank" rel="noreferrer">{gitHubIcon}</a>
+            </div>
+            <div className="container">
+                <span className="text-muted">© {currentYear} Brian Adams</span>
             </div>
         </footer>
     );
