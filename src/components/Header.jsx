@@ -1,5 +1,6 @@
 import Nav from "./Navigation";
 
+// Header component:
 export default function Header() {
     return (
         <header className="header">
