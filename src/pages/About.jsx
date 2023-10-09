@@ -3,7 +3,7 @@ export default function About() {
     <div>
       <h1> About Me </h1>
       <p>
-        I am a full stack web developer with a background in education and a
+        I am a full stack web developer with a background in Information Technology and a
         passion for learning. I have a Associate&apos;s degree in Office
         Technology from Bergen Community college, a Bachelor&apos;s degree in
         Information Technology from Fairleigh Dickinson University, and a
