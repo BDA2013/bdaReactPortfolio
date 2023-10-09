@@ -22,7 +22,7 @@ export default function Footer() {
             <a href={gitHubUrl} target="_blank" rel="noreferrer">{gitHubIcon}</a>
             </div>
             <div className="container">
-                <span className="text-muted">© {currentYear} Brian Adams</span>
+                <span className="text-muted">© {currentYear} Brandon Alexander</span>
             </div>
         </footer>
     );
