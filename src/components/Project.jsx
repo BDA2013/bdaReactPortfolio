@@ -7,12 +7,28 @@ const projectList = [
         image: 'https://via.placeholder.com/150',
         github: ''
     },
+    {
+        id: 2,
+        title: 'Project 2',
+        description: 'This is a description for project 2',
+        link: '',
+        image: 'https://via.placeholder.com/150',
+        github: ''
+    },
+    {
+        id: 3,
+        title: 'Project 3',
+        description: 'This is a description for project 3',
+        link: '',
+        image: 'https://via.placeholder.com/150',
+        github: ''
+    },
 ];
 
 export default function Project() {
     return (
         <div>
-            <h3> Project </h3>
+            <h3>Project</h3>
             <div className="container">
                 <div className="row">
                     {projectList.map((project) => (

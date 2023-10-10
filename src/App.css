@@ -5,6 +5,22 @@
   text-align: center;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: left;
+}
+
+li {
+  display: flex;
+  padding: 0 1em;
+}
+
+#frontEndTitle, #backEndTitle {
+  text-align: left;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
