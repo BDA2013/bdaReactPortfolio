@@ -3,24 +3,20 @@ export default function Contact() {
     <div>
       <h1> Contact </h1>
       {/* I see a contact form with fields for a name, an email address, and a message */}
-      <form>
-        <label htmlFor="name">
-          Name:
-          <input type="text" id="name" name="name" />
-        </label>
-        <br />
-        <label htmlFor="email">
-          Email:
-          <input type="email" id="email" name="email" />
-        </label>
-        <br />
-        <label htmlFor="message">
-          Message:
-          <textarea id="message" name="message" />
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-      </form>
+      <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label>Your Name: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" required /></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message" required></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
     </div>
   );
 }
