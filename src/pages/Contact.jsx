@@ -2,8 +2,7 @@ export default function Contact() {
   return (
     <div>
       <h1> Contact </h1>
-      {/* I see a contact form with fields for a name, an email address, and a message */}
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="POST" netlify>
       <p>
         <label>Your Name: <input type="text" name="name" /></label>
       </p>
