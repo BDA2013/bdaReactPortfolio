@@ -1,7 +1,7 @@
 // Imports
-import RiseUp from '../assets/images/riseUp.png';
-import PlayCare from '../assets/images/playCare.png';
-import GameChip from '../assets/images/gameChip.png';
+import RiseUp from '../assets/images/RiseUp.png';
+import PlayCare from '../assets/images/PlayCare.png';
+import GameChip from '../assets/images/GameChip.png';
 
 const projectList = [
     {
