@@ -11,9 +11,9 @@ export default function Contact() {
           </label>
         </div>
         <div>
-          <label>
+          <label htmlFor="email">
             Your Email:
-            <input type="email" name="email" required />
+            <input id="email" type="email" name="email" required />
           </label>
         </div>
         <div>
