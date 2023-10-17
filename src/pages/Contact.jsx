@@ -2,8 +2,8 @@ export default function Contact() {
   return (
     <div>
       <h1> Contact </h1>
-      <form name="contact" method="post" netlify onSubmit="submit">
-        <input type="hidden" name="form-name" value="contact" />
+      <form name="contact v1" method="post" data-netlify="true" onSubmit="submit">
+        <input type="hidden" name="form-name" value="contact v1" />
         <div>
           <label>
             Full Name:
