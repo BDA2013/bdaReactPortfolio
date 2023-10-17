@@ -1,7 +1,7 @@
 export default function Contact() {
   return <div>
       <h1> Contact </h1>
-      <form name='contact' netlify netlify-honeypot="bot-field">
+      <form name="contact" method="POST" netlify>
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label>
@@ -10,9 +10,8 @@ export default function Contact() {
           </label>
         </div>
         <div>
-          <label htmlFor="email">
-            Your Email:
-            <input id="email" type="email" name="email" required />
+        <label>Your Email: 
+          <input type="email" name="email" />
           </label>
         </div>
         <div>
