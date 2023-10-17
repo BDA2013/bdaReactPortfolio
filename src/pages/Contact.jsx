@@ -1,7 +1,7 @@
 export default function Contact() {
   return <div>
       <h1> Contact </h1>
-      <form name="contact" method="POST">
+      <form name="contact">
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label>
