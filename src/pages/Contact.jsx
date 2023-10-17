@@ -10,21 +10,21 @@ export default function Contact() {
             <input type="text" name="full-name" />
           </label>
         </div>
-        <p>
+        <div>
           <label>
             Your Email:
             <input type="email" name="email" required />
           </label>
-        </p>
-        <p>
+        </div>
+        <div>
           <label>
             Message:
             <textarea name="message" required></textarea>
           </label>
-        </p>
-        <p>
+        </div>
+        <div>
           <button type="submit">Send</button>
-        </p>
+        </div>
       </form>
     </div>
   );
