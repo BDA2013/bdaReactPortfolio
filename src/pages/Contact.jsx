@@ -1,8 +1,7 @@
 export default function Contact() {
-  return (
-     <div>
+  return <div>
       <h1> Contact </h1>
-      <form name='contact-v1' netlify netlify-honeypot="bot-field" hidden>
+      <form name='contact' netlify netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label>
@@ -27,5 +26,4 @@ export default function Contact() {
         </div>
       </form>
     </div>
-  );
 }
