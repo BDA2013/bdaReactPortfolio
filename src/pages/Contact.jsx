@@ -1,7 +1,7 @@
 export default function Contact() {
   return <div>
       <h1> Contact </h1>
-      <form name="contact" action="/contact/success" method="POST" netlify>
+      <form name="contact" onSubmit="/" method="POST" netlify>
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label>
