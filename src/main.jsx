@@ -10,7 +10,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
-import Success from "./pages/Success";
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -26,10 +25,6 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
-      },
-      {
-        path: "/contact/success",
-        element: <Success />,
       },
       {
         path: "/portfolio",
