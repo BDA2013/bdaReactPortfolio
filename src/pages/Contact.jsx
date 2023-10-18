@@ -5,13 +5,25 @@ export default function Contact() {
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label>
-            Full Name:
-            <input type="text" name="full-name" />
+            First Name:
+            <input type="text" name="first-name" required />
+          </label>
+        </div>
+        <div>
+          <label>
+            Last Name:
+            <input type="text" name="last-name" required />
+          </label>
+        </div>
+        <div>
+          <label>
+            Your Company:
+            <input type="text" name="company" />
           </label>
         </div>
         <div>
         <label>Your Email: 
-          <input type="email" name="email" />
+          <input type="email" name="email" required />
           </label>
         </div>
         <div>
