@@ -55,7 +55,7 @@ export default function Contact() {
       <form name="contact" method="POST" onSubmit={handleSubmit} data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <div>
-          <label htmlFor="fname">First Name:</label>
+          <label htmlFor="first_name">First Name:</label>
           <input
             type="text"
             name="first_name"
@@ -64,7 +64,7 @@ export default function Contact() {
           />
         </div>
         <div>
-          <label htmlFor="lname">Last Name:</label>
+          <label htmlFor="last_name">Last Name:</label>
           <input
             type="text"
             name="last_name"
