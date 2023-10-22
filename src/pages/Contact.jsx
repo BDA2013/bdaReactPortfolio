@@ -18,7 +18,14 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!errorMessage) {
-      console.log('Submit Form', formState);
+      // console.log('Submit Form', formState);
+      fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(Object.entries(formState)).toString()
+      })
+        .then(() => console.log('Form successfully submitted'))
+        .catch((error) => alert(error));
     }
   };
 
