@@ -1,65 +1,74 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { validateEmail } from '../utils/helpers';
+import { validateEmail } from "../utils/helpers";
 
 export default function Contact() {
-
   const [formState, setFormState] = useState({
-    fname: '',
-    lname: '',
-    company: '',
-    email: '',
-    message: '',
+    first_name: "",
+    last_name: "",
+    company: "",
+    email: "",
+    message: "",
   });
 
-  const [errorMessage, setErrorMessage] = useState('');
-  const { fname, lname, company, email, message } = formState;
+  const [errorMessage, setErrorMessage] = useState("");
+  const { first_name, last_name, company, email, message } = formState;
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!errorMessage) {
-      // console.log('Submit Form', formState);
-      fetch('/', {
-        method: 'POST',
+      const formData = formState;
+
+      fetch("/", {
+        method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(Object.entries(formState)).toString()
+        body: new URLSearchParams(formData).toString(),
       })
-        .then(() => console.log('Form successfully submitted'))
+        .then(() => alert("Thank you for your submission"))
         .catch((error) => alert(error));
     }
+    document
+      .querySelector("form")
+      .addEventListener("submit", handleSubmit);
   };
 
   const handleChange = (e) => {
-    if (e.target.name === 'email') {
+    if (e.target.name === "email") {
       const isValid = validateEmail(e.target.value);
       if (!isValid) {
-        setErrorMessage('Your email is invalid.');
+        setErrorMessage("Your email is invalid.");
       } else {
-        setErrorMessage('');
+        setErrorMessage("");
       }
     } else {
       if (!e.target.value.length) {
         setErrorMessage(`${e.target.name} is required.`);
       } else {
-        setErrorMessage('');
+        setErrorMessage("");
       }
     }
     if (!errorMessage) {
       setFormState({ ...formState, [e.target.name]: e.target.value });
-      console.log('Handle Form', formState);
+      console.log("Handle Form", formState);
     }
   };
-  
-  return <section>
+
+  return (
+    <section>
       <h1> Contact </h1>
-      <form name="contact" method="POST" onSubmit={handleSubmit} data-netlify="true">
+      <form
+        name="contact"
+        method="POST"
+        onSubmit={handleSubmit}
+        data-netlify="true"
+      >
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label htmlFor="first_name">First Name:</label>
           <input
             type="text"
             name="first_name"
-            defaultValue={fname}
+            defaultValue={first_name}
             onBlur={handleChange}
           />
         </div>
@@ -68,7 +77,7 @@ export default function Contact() {
           <input
             type="text"
             name="last_name"
-            defaultValue={lname}
+            defaultValue={last_name}
             onBlur={handleChange}
           />
         </div>
@@ -107,4 +116,5 @@ export default function Contact() {
         <button type="submit">Submit</button>
       </form>
     </section>
+  );
 }
