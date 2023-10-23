@@ -8,8 +8,9 @@ export function validateEmail(email) {
 }
 
 export function validatePhone(phone) {
-  var re = /^\d{10}$/;
-  return re.test(String(phone));
+  // validte 10 digit phone number with dashes and parens
+  var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+  return re.test(phone);
 }
 
 export function removeHyphensAndCapitalize(string) {

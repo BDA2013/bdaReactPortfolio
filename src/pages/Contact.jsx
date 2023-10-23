@@ -42,9 +42,21 @@ export default function Contact() {
     if (!errorMessage) {
       setFormState({ ...formState, [e.target.name]: e.target.value });
     }
+  };
+
+  // Use a function to auto-format the phone input as (xxx) xxx-xxxx
+  // This function will run every time the user types a character
+  const handlePhoneChange = (e) => {
+    // If the length of the phone number is 10 characters
+    if (e.target.value.length === 10) {
+      // Format the number as (xxx) xxx-xxxx
+      e.target.value = e.target.value
+        .replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
+    }
+    // Update formState
+    setFormState({ ...formState, [e.target.name]: e.target.value });
   }
   
-
 
   return <section>
       <h1> Contact </h1>
@@ -97,7 +109,10 @@ export default function Contact() {
         <input
           type="tel"
           name="phone"
+          id="tele"
+          maxLength={12}
           defaultValue={phone}
+          onChange={handlePhoneChange}
           onBlur={handleChange}
         />
         </div>
