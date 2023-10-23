@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { validateEmail } from "../utils/helpers";
+import { validateEmail, validatePhone } from "../utils/helpers";
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -7,11 +7,12 @@ export default function Contact() {
     lastName: "",
     company: "",
     email: "",
+    phone: "",
     message: "",
   });
 
   const [errorMessage, setErrorMessage] = useState("");
-  const { firstName, lastName, company, email, message } = formState;
+  const { firstName, lastName, company, email, phone, message } = formState;
 
   const handleChange = (e) => {
     if (e.target.name === "email") {
@@ -22,6 +23,15 @@ export default function Contact() {
       } else {
         setErrorMessage("");
       }
+    } else if (e.target.name === "phone") {
+      const isValid = validatePhone(e.target.value);
+      console.log(isValid);
+      if (!isValid) {
+        setErrorMessage("Your phone number is invalid.");
+      } else {
+        setErrorMessage("");
+      }
+
     } else {
       if (!e.target.value.length) {
         setErrorMessage(`${e.target.name} is required.`);
@@ -79,6 +89,15 @@ export default function Contact() {
           type="email"
           name="email"
           defaultValue={email}
+          onBlur={handleChange}
+        />
+        </div>
+        <div>
+        <label htmlFor="phone">Your Phone:</label>
+        <input
+          type="tel"
+          name="phone"
+          defaultValue={phone}
           onBlur={handleChange}
         />
         </div>
