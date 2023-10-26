@@ -12,6 +12,7 @@ export default function Resume() {
         <li>CSS</li>
         <li>JQuery</li>
         <li>JavaScript</li>
+        <li>TypeScript</li>
         <li>Bootstrap</li>
         <li>AJAX</li>
         <li>SASS</li>
