@@ -60,6 +60,7 @@ export default function Contact() {
 
   return <section>
       <h1> Contact </h1>
+      <p>Reach out to me via the form below:</p>
       <form name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <div>
@@ -134,5 +135,9 @@ export default function Contact() {
           <button type="submit">Send</button>
         </div>
       </form>
+      <br />
+      <h2>OR</h2>
+      <br />
+      <p>Reach out directly to my Email: <a href="mailto:bda2013@me.com">bda2013@me.com</a></p>
     </section>
 }
