@@ -24,6 +24,7 @@ export default function Resume() {
         <li>MongoDB</li>
         <li>Express</li>
         <li>ReactJS</li>
+        <li>React Native</li>
         <li>Node</li>
         <li>Handlebars</li>
         <li>Firebase</li>
